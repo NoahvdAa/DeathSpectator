@@ -25,8 +25,9 @@ public class DeathSpectator extends JavaPlugin implements Listener {
             @Override
             public void run() {
                 Player p = (Player) e.getEntity();
-                if(!p.isDead()) return;
-                p.spigot().respawn();
+                if(p.isDead()) {
+                	p.spigot().respawn();
+                }
                 p.setGameMode(GameMode.SPECTATOR);
                 
             }
