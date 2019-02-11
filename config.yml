@@ -1,0 +1,4 @@
+# This can be either 'instant' or 'respawn'.
+# Instant will keep the player at his/her current place and change their gamemode to spectator.
+# Respawn will show the "You Died" screen, then automatically respawn the player and put them in spectator mode.
+method: 'respawn'

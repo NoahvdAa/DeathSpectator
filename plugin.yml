@@ -1,5 +1,9 @@
 name: DeathSpectator
-version: 1.0.1
+version: 1.0.2
 author: NoahvdAa
 main: me.noahvdaa.deathspectator.DeathSpectator
 api-version: 1.13
+permissions:
+  deathspectator.bypass:
+   description: When you have this permission, you don''t get put in spectator mode automatically.
+   default: false
