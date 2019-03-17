@@ -27,16 +27,15 @@ public class DeathSpectator extends JavaPlugin implements Listener {
 		if(p.hasPermission("deathspectator.bypass")) return;
 		if(getConfig().getString("method").equalsIgnoreCase("respawn")) {
 			BukkitScheduler scheduler = getServer().getScheduler();
-	        scheduler.scheduleSyncDelayedTask(this, new Runnable() {
-	            @Override
-	            public void run() {
-	                if(p.isDead()) {
-	                	p.spigot().respawn();
-	                }
-	                p.setGameMode(GameMode.SPECTATOR);
-	                
-	            }
-	        }, 1L);
+			scheduler.scheduleSyncDelayedTask(this, new Runnable() {
+	        		@Override
+	            		public void run() {
+	                		if(p.isDead()) {
+	                			p.spigot().respawn();
+	                		}
+	                		p.setGameMode(GameMode.SPECTATOR);
+	            		}
+	        	}, 1L);
 		}
 	}
 	
@@ -47,8 +46,8 @@ public class DeathSpectator extends JavaPlugin implements Listener {
 		if(e.getDamage() < p.getHealth()) return;
 		if(getConfig().getString("method").equalsIgnoreCase("instant")) {
 			e.setCancelled(true);
-            p.setHealth(20.0);
-            p.setGameMode(GameMode.SPECTATOR);
+            		p.setHealth(20.0);
+            		p.setGameMode(GameMode.SPECTATOR);
 		}
 	}
 	

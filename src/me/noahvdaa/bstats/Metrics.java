@@ -1,4 +1,4 @@
-package me.noahvdaa.bstats;
+package me.noahvdaa.bstats
 
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -25,7 +25,7 @@ import java.util.zip.GZIPOutputStream;
  * <p>
  * Check out https://bStats.org/ to learn more about bStats!
  */
-@SuppressWarnings({"unchecked"})
+@SuppressWarnings({"WeakerAccess", "unused"})
 public class Metrics {
 
     static {
@@ -579,7 +579,7 @@ public class Metrics {
             this.callable = callable;
         }
 
-		@Override
+        @Override
         protected JSONObject getChartData() throws Exception {
             JSONObject data = new JSONObject();
             JSONObject values = new JSONObject();
