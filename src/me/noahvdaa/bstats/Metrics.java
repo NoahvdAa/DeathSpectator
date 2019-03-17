@@ -1,4 +1,4 @@
-package me.noahvdaa.bstats
+package me.noahvdaa.bstats;
 
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
