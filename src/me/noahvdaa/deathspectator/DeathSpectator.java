@@ -41,6 +41,7 @@ public class DeathSpectator extends JavaPlugin implements Listener {
 	
 	@EventHandler
 	public void damage(EntityDamageEvent e) {
+		if(!(e.getEntity() instanceof Player)) return;
 		Player p = (Player) e.getEntity();
 		if(p.hasPermission("deathspectator.bypass")) return;
 		if(e.getDamage() < p.getHealth()) return;
